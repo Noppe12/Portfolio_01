@@ -1,54 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-# クリエイター画像投稿サイト
+# クリエイター用画像投稿サイト
 
 ## サイト概要
-個人クリエイターが自分で簡単に管理できるサイト
+クリエイターが画像を簡単に投稿し、閲覧を管理できるサイト
 
 ### サイトテーマ
 クリエイター用の登録制サイト
 
 ### テーマを選んだ理由
-近年個人でSNSを活用したクリエイターが増えているので、youtubeのメンバー機能のようなサイトがあれば
-より一層個人クリエイターはやりやすくなるのではないのかなと思い、個人サイトを作れるサイトを考えました。
+最終目標はyoutubeのメンバー機能のような個人クリエイター用管理サイトの作成だが、
+現在の技術を鑑みて、「管理者」「クリエイター」「メンバー」の3つの権限に分けた画像投稿サイト
 
 ### ターゲットユーザ
-ツイッターやyoutube、pixivなどで個人で投稿しているクリエイター向け
+ツイッターやyoutube、pixivなどで投稿しているクリエイター向け
 
 ### 主な利用シーン
-
+クリエイターが自分の作品をツイッターなどのSNSよりも限定的な人に見せたい場合に使用するサイト
 
 
 ## 設計書
-ER図<>
-データベース設計書<>
-詳細設計書<>
+ER図<作成中>
+データベース設計書<作成中>
+詳細設計書<作成中>
 
 ## チャレンジ要素一覧
-<https://docs.google.com/spreadsheets/d/1E4Quehglf9PxM1XTE-ft2X5-hJ5dmoJhsI-UJlgzVmY/edit#gid=0>
+<https://docs.google.com/spreadsheets/d/1qILWtOxYoGOQPI8X_t-KiCqLgpPC_yFjSSqKz_aU4CY/edit?usp=sharing>
 
 ## 開発環境
 - OS：Linux(CentOS)
