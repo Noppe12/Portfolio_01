@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-2">
+    </div>
+
+    <div class="col-3 mt-2">
+      <%= attachment_image_tag @item, :image, :fill, 200, 200, fallback: "no_image.jpg" %>
+    </div>
+
+    <div class="col-7 mt-2">
+      <div class="h4 font-weight-bold">
+        <%= @item.image_name %>
+      </div>
+      <div class="h5 m-1">
+        <%= @item.introduction %>
+      </div>
+      <div id="favorite_area_<%= @item.id %>", class="favoriteArea">
+        <%= render partial: "public/favorites/favorite", locals: { item: @item } %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-2"></div>
+
+    <div class="col-8">
+      <div class="m-2">
+        <%= form_for [@item, @comment] do |form| %>
+          <%= form.text_area :content, size: "40x5" %>
+          <%= form.submit '送信', class: "btn-sm btn-primary" %>
+        <% end %>
+      </div>
+      <table class="table comment">
+        <thead>
+          <tr>
+            <th class="comment__name">コメント投稿者</th>
+            <th class="comment__niyou">コメント内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @comments.each do |commen| %>
+            <tr>
+              <td><%= commen.member.nickname %></td>
+              <td><%= commen.content %></td>
+              <% if commen.member == current_member %>
+                <td><%= link_to "削除", item_comment_path(@item, commen), method: :delete %></td>
+              <% end %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

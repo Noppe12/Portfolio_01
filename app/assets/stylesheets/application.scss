@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+
+ .header {
+   position: fixed;
+ }
+
+ .body {
+   padding-top: 60px;
+ }
+
+ .comment{
+  width: 530px;
+   &__name{
+    width: 150px;
+   }
+   &__niyou{
+    width: 300px;
+   }
+   &__button{
+    width: 80px;
+   }
+ }

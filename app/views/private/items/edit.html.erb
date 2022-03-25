@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row mt-2 mb-2">
+    <div class="col-1"></div>
+    <div class="col-8">
+      <div class="h4 font-weight-bold">
+        投稿編集
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <%= form_with model: @item, url: private_item_path(@item.id), method: :PATCH, local:true do |f| %>
+        <table class="table">
+          <tr class="mb-2">
+            <th class="label">画像</th>
+            <td>
+              <%= attachment_image_tag @item, :image, :fill, 180, 150 %></br>
+              <%= f.attachment_field :image %>
+            </td>
+          </tr>
+          <tr class="mb-2">
+            <th class="label">画像名</th>
+            <td>
+              <%= f.text_field :image_name %>
+            </td>
+          </tr>
+          <tr class="mb-2">
+            <th class="label">画像説明</th>
+            <td><%= f.text_area :introduction, class:"form-control  introduction", rows:"5" %></td>
+          </tr>
+        </table>
+        <div class="action mt-3">
+            <%= f.submit '変更を保存', class: "btn btn-success" %>
+            <%= link_to "投稿を削除", private_item_path(@item.id), class:"btn btn-sm btn-danger", method: :delete, "data-confirm" => "本当に消しますか？" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

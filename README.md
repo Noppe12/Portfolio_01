@@ -20,9 +20,22 @@
 
 
 ## 設計書
-ER図<作成中>
-データベース設計書<作成中>
+ER図<https://docs.google.com/spreadsheets/d/1W9VweLvwCbJIV4Pq1OK6eS358m533xcUNBcieFGyrHs/edit?usp=sharing>
+データベース設計書<https://docs.google.com/spreadsheets/d/1rrX0MfRsnk_QPHA89kNiNqVeFm57F9If7Hk_ZeOZBDw/edit?usp=sharing>
 詳細設計書<作成中>
+
+## 使用gem
+  gem 'devise'
+
+  gem "refile", require: "refile/rails", github: 'manfe/refile'
+  gem "refile-mini_magick"
+
+  gem 'kaminari','~> 1.2.1'
+
+  gem 'bootstrap', '~> 4.5'
+  gem 'jquery-rails'
+
+  gem 'pry-rails'
 
 ## チャレンジ要素一覧
 <https://docs.google.com/spreadsheets/d/1qILWtOxYoGOQPI8X_t-KiCqLgpPC_yFjSSqKz_aU4CY/edit?usp=sharing>

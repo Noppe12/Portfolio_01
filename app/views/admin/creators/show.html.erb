@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-3">
+      <h4 class="daimei"><%= @creator.penname %>さんの情報詳細</h4>
+    </div>
+  </div>
+  <div class="bigbox1">
+    <table class='table tablebox'>
+      <tr>
+        <th>クリエイターID</th>
+        <td><%= @creator.id %></td>
+      </tr>
+      <tr>
+        <th>ペンネーム</th>
+        <td><%= @creator.penname %></td>
+      </tr>
+      <tr>
+        <th>メールアドレス</th>
+        <td><%= @creator.email %></td>
+      </tr>
+      <tr>
+        <th>ステータス</th>
+        <td>
+          <% if @creator.is_active %>
+            有効
+          <% else %>
+            退会
+          <% end %>
+        </td>
+      </tr>
+    </table>
+    <%= link_to "編集する", edit_admin_creator_path(@creator.id), class:"btn btn-sm btn-success", data: {"turbolinks" => false} %>
+    <%= link_to "クリエイター一覧に戻る", admin_creators_path, class:"btn btn-sm btn-info", data: {"turbolinks" => false} %>
+    </div>
+</div>

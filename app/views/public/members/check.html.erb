@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <div class="h5 text-danger mt-3 font-weight-bold d-flex justify-content-center">本当に退会しますか？</div>
+      <div class="mt-3 d-flex justify-content-center">
+        退会すると、メンバー登録情報や<br />
+        これまでの投稿が閲覧できなくなります。<br />
+        退会する場合は、「退会する」をクリックしてください。
+      </div>
+      <div class="mt-3 d-flex justify-content-center">
+        <%= link_to "退会しない", members_mypage_path, class: "btn btn-info" %>　<%= link_to "退会する", members_withdraw_path, method: :patch, class: "btn btn-danger" %>
+      </div>
+    </div>
+  </div>
+</div>

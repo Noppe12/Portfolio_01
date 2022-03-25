@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-2">
+    </div>
+    <div class="col-3 mt-2">
+      <%= attachment_image_tag @item, :image, :fill, 200, 200, fallback: "no_image.jpg" %>
+    </div>
+    <div class="col-5 mt-2">
+      <div class="h4 font-weight-bold"><%= @item.image_name %></div>
+      <div class="h5 m-1"><%= @item.introduction %></div>
+      <div class="favoriteCount">いいね数　　　　　  <%= @item.favorites.count %></div>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <table class="table comment">
+        <thead>
+          <tr>
+            <th class="comment__name">コメント投稿者</th>
+            <th class="comment__niyou">コメント内容</th>
+            <th class="comment__button"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @comments.each do |comment| %>
+            <tr>
+              <td><%= comment.member.nickname %></td>
+              <td><%= comment.content %></td>
+              <td><%= link_to "削除", item_comment_path(@item, comment), method: :delete %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

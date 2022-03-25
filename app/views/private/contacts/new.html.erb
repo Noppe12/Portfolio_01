@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <div class="h4 font-weight-bold mt-3">
+        お問い合わせ内容
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3">
+   <div class="col-2"></div>
+    <div class="col-8">
+      <table class='table tablebox'>
+        <%= form_with model: @contact, url: private_contacts_path, method: :POST, local: true do |f| %>
+          <tr>
+            <th>ペンネーム</th>
+            <td><%= f.text_field :penname, :value => current_creator.penname %></td>
+          </tr>
+          <tr>
+            <th>Eメール</th>
+            <td><%= f.text_field :email, :value => current_creator.email %></td>
+          </tr>
+          <tr>
+            <th>お問い合わせ内容</th>
+            <td><%= f.text_area :content %></td>
+          </tr>
+      </table>
+      <div class ="actions mt-1 ml-5">
+        <%= f.submit "送信", class: "btn btn-sm btn-success" %>
+      </div>
+     <% end %>
+    </div>
+  </div>
+</div>
